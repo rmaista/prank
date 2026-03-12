@@ -60,7 +60,12 @@ for ($a = 0; $a < $jumlah; $a++) {
 
     $asw = curl_exec($ch);
     
+    if (curl_errno($ch)) {
+        echo "Error: " . curl_error($ch) . "\n";
+    } else {
+        echo $a + 1 . ". $nomer [Sending]\n";
+    }
 
-    echo $a + 1 . ". $nomer [Sending]\n";
+    curl_close($ch);
 }
 ?>
