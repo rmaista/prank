@@ -59,7 +59,7 @@ for ($a = 0; $a < $jumlah; $a++) {
     curl_setopt($ch, CURLOPT_POSTFIELDS, $ar);
 
     $asw = curl_exec($ch);
-    curl_close($ch);
+    
 
     echo $a + 1 . ". $nomer [Sending]\n";
 }
